@@ -8,10 +8,7 @@ const app = express();
 connectDB();
 
 app.use(express.json());
-app.use(cors({
-    origin: ['http://localhost:5000'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-}));
+app.use(cors());
 app.use('/api/scrape', scrapeRoute);
 
 export default app;
